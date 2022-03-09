@@ -10,12 +10,7 @@
 #include "curvedox.dtsi"
 
 &default_transform {
-	col-offset = <5>;
-};
-
-&oled {
-	segment-remap;
-	com-invdir;
+	col-offset = <6>;
 };
 
 &kscan0 {
