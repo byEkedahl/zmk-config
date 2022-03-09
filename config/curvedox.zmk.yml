@@ -1,0 +1,13 @@
+file_format: "1"
+id: curvedox
+name: Curvedox
+type: shield
+url: 
+requires: 
+exposes: 
+features:
+  - keys
+  - display
+siblings:
+  - curvedox_left
+  - curvedox_right

@@ -11,9 +11,14 @@
 #   - board: nice_nano_v2
 #     shield: reviung41
 #
+# Added curvedox
 ---
 include:
   - board: bluemicro840_v1
     shield: microdox_left
   - board: bluemicro840_v1
     shield: microdox_right
+  - board: adafruit_feather_nrf52840_zmk
+    shield: curvedox_left
+  - board: adafruit_feather_nrf52840_zmk
+    shield: curvedox_right

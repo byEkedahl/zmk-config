@@ -1,0 +1,9 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+# Fixed for curvedox
+
+config SHIELD_CURVEDOX_LEFT
+	def_bool $(shields_list_contains,curvedox_left)
+
+config SHIELD_CURVEDOX_RIGHT
+	def_bool $(shields_list_contains,curvedox_right)

@@ -1,0 +1,4 @@
+# Files that should be ignored
+.vscode
+.DS_Store
+config/boards/adafruit_feather.overlay
