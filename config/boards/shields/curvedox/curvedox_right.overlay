@@ -12,14 +12,3 @@
 &default_transform {
 	col-offset = <6>;
 };
-
-&kscan0 {
-	col-gpios
-		= <&feather_header 6 GPIO_ACTIVE_HIGH>
-		, <&feather_header 7 GPIO_ACTIVE_HIGH>
-		, <&feather_header 8 GPIO_ACTIVE_HIGH>
-		, <&feather_header 9 GPIO_ACTIVE_HIGH>
-		, <&feather_header 10 GPIO_ACTIVE_HIGH>
-		, <&feather_header 11 GPIO_ACTIVE_HIGH>
-		;
-};
