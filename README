@@ -1,5 +1,7 @@
 Curvedox36 a handwired split keyboard using adafruit feather nrf52840 express and ZMK
 
-This firmware is still not working!
+This firmware is still not fully working but it's mostly down to fixing a keymap that has all key for a Swedish layout.
 
+
+Using this board
 https://www.adafruit.com/product/4062
