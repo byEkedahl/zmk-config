@@ -79,8 +79,8 @@
 //             | NAV/BACK | SHFT | GUI |   | ALT | SPACE | SYM/ENTER |
                         bindings = <
    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P
-   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SE_OE_LOW
-   &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp SE_AA_LOW &kp SE_AE_LOW &kp TAB
+   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &oe_low
+   &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &aa_low   &ae_low &kp TAB
           &kp LGUI &kp LSHFT &lt 1 BSPC  &kp RALT &kp SPACE &lt 2 RET 
                         >;
                 };
