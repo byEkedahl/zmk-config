@@ -29,7 +29,6 @@
             timeout-ms = <10>;
             key-positions = <0 1 2 3>;
             bindings = <&to BT>;
-	    layers = <NU>; 
         };
 
         keymap {
@@ -40,12 +39,12 @@
 // |  Q  |  W  |  E  |  R  |  T   |             |  Y  |  U   |  I  |  O  |  P  |
 // |  A  |  S  |  D  |  F  |  G   |             |  H  |  J   |  K  |  L  |  Ö  |
 // |  Z  |  X  |  C  |  V  |  B   |             |  N  |  M   |  Å  |  Ä  | ->| |
-//             | NAV/BACK | SHFT | GUI |   | ALT | SPACE | SYM/ENTER |
+//             | NUM/BACK | SHFT | GUI |   | ALT | SPACE | SYM/ENTER |
                         bindings = <
    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P
    &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI
    &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp LBKT  &kp SQT &kp TAB
-          &kp LGUI &kp LSHFT &lt 1 BSPC  &kp RALT &kp SPACE &lt 2 RET 
+          &kp LGUI &kp LSHFT &lt 2 BSPC  &kp RALT &kp SPACE &lt 1 RET 
                         >;
                 };
 
