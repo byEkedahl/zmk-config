@@ -32,17 +32,13 @@
         };
 
         behaviors {
-                symbolsMacro: behavior_macro_1 {
+                my_macro: my_macro {
                         compatible = "zmk,behavior-macro";
-                        label = "MACRO1";
-                        #binding-cell = <0>;
-                        bindings = < &sl SM>;
-                };
-                numbersMacro: behavior_macro_1 {
-                        compatible = "zmk,behavior-macro";
-                        label = "MACRO2";
-                        #binding-cell = <0>;
-                        bindings = < &sl NU>;
+                        label = "ZM_my_macro";
+                        #binding-cells = <0>;
+                        wait-ms = <30>;
+                        tap-ms = <40>;
+                        bindings = <&kp Z &kp M &kp K>;
                 };
         };
 
