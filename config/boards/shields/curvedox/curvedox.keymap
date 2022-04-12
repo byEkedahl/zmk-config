@@ -32,9 +32,9 @@
         };
 
         behaviors {
-                my_macro: my_macro {
+                symbolsMacro: symbolsMacro {
                         compatible = "zmk,behavior-macro";
-                        label = "ZM_my_macro";
+                        label = "MACRO1";
                         #binding-cells = <0>;
                         wait-ms = <30>;
                         tap-ms = <40>;
@@ -53,7 +53,7 @@
 //             | NUM/BACK | SHFT | GUI |   | ALT | SPACE | SYM/ENTER |
                         bindings = <
    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P
-   &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI
+   &kp A &kp S &kp D &kp F &mt symbolsMacro G   &kp H &kp J  &kp K     &kp L   &kp SEMI
    &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp LBKT  &kp SQT &kp TAB
           &kp LGUI &kp LSHFT &lt 2 BSPC  &kp RALT &kp SPACE &lt 1 RET 
                         >;
