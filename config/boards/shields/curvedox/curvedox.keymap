@@ -31,6 +31,21 @@
             bindings = <&to BT>;
         };
 
+        behaviors {
+                symbolsMacro: behavior_macro_1 {
+                        compatible = "zmk,behavior-macro";
+                        label = "MACRO1";
+                        #binding-cell = <0>;
+                        bindings = < &sl SM>;
+                };
+                numbersMacro: behavior_macro_1 {
+                        compatible = "zmk,behavior-macro";
+                        label = "MACRO2";
+                        #binding-cell = <0>;
+                        bindings = < &sl NU>;
+                };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
