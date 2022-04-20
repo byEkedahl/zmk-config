@@ -55,7 +55,7 @@
    &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P
    &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI
    &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp LBKT  &kp SQT &kp TAB
-          &kp LGUI &kp LSHFT &lt 2 BSPC  &kp RALT &kp SPACE &lt 1 RET 
+          &kp LGUI &kp LSHFT &lt 2 BSPC  &mt RALT dot &kp SPACE &lt 1 RET 
                         >;
                 };
 
@@ -67,7 +67,7 @@
 //             | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp LS(1)  &kp LS(2)    &kp LS(3)  &kp LS(4)  &kp LS(5)   &kp LS(6) &kp LS(7)  &kp LS(8) &kp LS(9) &kp LS(0)
-   &trans    &trans    &trans    &trans    &trans   &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp PIPE
+   &trans     &trans       &trans     &trans     &trans      &kp MINUS &kp EQUAL  &kp LBKT  &kp RBKT &kp PIPE
    &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans          &trans   &kp BSLH
                        &kp LGUI  &to AL   &kp SPACE   &kp RET   &kp SPACE    &kp RALT
                         >;
