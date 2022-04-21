@@ -75,7 +75,7 @@
 //             | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp LS(N1)   &kp LS(N2)    &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                    &kp LS(N6) &kp LS(N7)  &kp LS(N8) &kp LS(N9) &kp LS(N0)
-   &kp EQUAL    &kp LA(N2)    &kp TILDE   &kp LBKT  &kp RBKT           &kp BSLH   &kp LS(RA(N7))   &kp RA(N8)  &kp RA(N9) &kp RA(N7)
+   &kp MINUS    &kp LA(N2)    &kp TILDE   &kp LBKT  &kp RBKT           &kp BSLH   &kp LS(RA(N7))   &kp RA(N8)  &kp RA(N9) &kp RA(N7)
    &kp ESC      &kp COMMA     &kp EQUAL      &trans      &trans                     &kp FSLH   &kp PIPE    &kp LS(RA(N8))  &kp LS(RA(N9))   &kp TAB
                                               &kp LGUI    &to AL   &kp BSPC   &mt RALT DOT   &mt RCTRL SPACE   &kp RET
                         >;
