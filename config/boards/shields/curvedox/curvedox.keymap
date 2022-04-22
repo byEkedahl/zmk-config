@@ -60,7 +60,6 @@
                         label = "TAPDANCE2";
                         #binding-cells = <0>;
                         tapping-term-ms = <190>;
-                        flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
                         
                 };
@@ -69,7 +68,6 @@
                         label = "TAPDANCE3";
                         #binding-cells = <0>;
                         tapping-term-ms = <190>;
-                        flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>, <&kp>;
                 };
                 symbolsMacro: symbolsMacro {
