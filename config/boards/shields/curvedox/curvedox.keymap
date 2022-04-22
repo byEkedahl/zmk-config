@@ -55,18 +55,18 @@
                         bindings = <&kp>, <&to>;
                         retro-tap;
                 };
-                td2: tapdance {
-                        compatible = "zmk,behavior-hold-tap";
-                        label = "TAPDANCE";
+                td2: tapdance2 {
+                        compatible = "zmk,behavior-tap-dance";
+                        label = "TAPDANCE2";
                         #binding-cells = <2>;
                         tapping-term-ms = <190>;
                         quick_tap_ms = <0>;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
                 };
-                td3: tapdance {
-                        compatible = "zmk,behavior-hold-tap";
-                        label = "TAPDANCE";
+                td3: tapdance3 {
+                        compatible = "zmk,behavior-tap-dance";
+                        label = "TAPDANCE3";
                         #binding-cells = <2>;
                         tapping-term-ms = <190>;
                         quick_tap_ms = <0>;
