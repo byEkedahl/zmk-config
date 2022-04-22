@@ -58,7 +58,7 @@
                 td2: tapdance2 {
                         compatible = "zmk,behavior-tap-dance";
                         label = "TAPDANCE2";
-                        #binding-cells = <1>;
+                        #binding-cells = <0>;
                         tapping-term-ms = <190>;
                         quick_tap_ms = <0>;
                         flavor = "tap-preferred";
@@ -67,7 +67,7 @@
                 td3: tapdance3 {
                         compatible = "zmk,behavior-tap-dance";
                         label = "TAPDANCE3";
-                        #binding-cells = <2>;
+                        #binding-cells = <0>;
                         tapping-term-ms = <190>;
                         quick_tap_ms = <0>;
                         flavor = "tap-preferred";
