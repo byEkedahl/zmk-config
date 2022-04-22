@@ -55,13 +55,12 @@
                         bindings = <&kp>, <&to>;
                         retro-tap;
                 };
-                td2: tapdance2 {
+                td: tapdance {
                         compatible = "zmk,behavior-tap-dance";
-                        label = "TAPDANCE2";
+                        label = "TAPDANCE";
                         #binding-cells = <0>;
                         tapping-term-ms = <190>;
-                        bindings = <&kp>, <&kp>;
-                        
+                        bindings = <&kp>, <&kp>;                        
                 };
                 symbolsMacro: symbolsMacro {
                         compatible = "zmk,behavior-macro";
@@ -99,8 +98,8 @@
                         bindings = <
    &kp LS(N1)     &kp LS(N2)    &kp LS(N3)  &kp LS(N4)  &kp LS(N5)              &kp LS(N6)               &kp LS(N7)       &kp LS(N8)      &kp LS(N9)      &kp LS(N0)
    &kp LS(MINUS)  &kp LA(N2)    &kp LA(N3)  &kp LA(N4)  &kp RBKT                &kp BSLH                 &kp LS(RA(N7))   &kp RA(N8)      &kp RA(N9)      &kp RA(N7)
-   &kp ESC        &kp COMMA     &kp EQUAL   &kp MINUS   &kp FSLH                &td2 LT GT                &kp PIPE         &kp LS(RA(N8))  &kp LS(RA(N9))  &kp TAB
-                                &kp LGUI    &sr LSHFT AL   &kp BSPC             &td2 DOT COMMA   &mt RCTRL SPACE  &kp RET
+   &kp ESC        &kp COMMA     &kp EQUAL   &kp MINUS   &kp FSLH                &td LT GT                &kp PIPE         &kp LS(RA(N8))  &kp LS(RA(N9))  &kp TAB
+                                &kp LGUI    &sr LSHFT AL   &kp BSPC             &td DOT COMMA   &mt RCTRL SPACE  &kp RET
                         >;
                 };
 
@@ -114,9 +113,9 @@
 //              |      |     |      |>   <|  . , ; |  0  |  RET  |
                         bindings = <
    &kp N1     &kp N2    &kp N3    &kp N4        &kp N5                 &kp N6                  &kp N7  &kp N8 &kp N9 &kp N0
-   &kp LSHFT  &kp LEFT  &kp UP    &kp RIGHT     &kp PAGE_UP            &kp KP_MINUS            &kp N4  &kp N5 &kp N6 &td2 KP_MULTIPLY KP_DIVIDE
-   &kp ESC    &kp HOME  &kp DOWN  &kp END       &kp PAGE_DOWN          &td2 KP_PLUS KP_EQUAL    &kp N1  &kp N2 &kp N3 &kp TAB
-                        &trans    &sr LSHFT AL  &trans                 &td2 DOT COMMA &kp N0  &kp RET
+   &kp LSHFT  &kp LEFT  &kp UP    &kp RIGHT     &kp PAGE_UP            &kp KP_MINUS            &kp N4  &kp N5 &kp N6 &td KP_MULTIPLY KP_DIVIDE
+   &kp ESC    &kp HOME  &kp DOWN  &kp END       &kp PAGE_DOWN          &td KP_PLUS KP_EQUAL    &kp N1  &kp N2 &kp N3 &kp TAB
+                        &trans    &sr LSHFT AL  &trans                 &td DOT COMMA &kp N0  &kp RET
                         >;
                 };
 
