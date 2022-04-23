@@ -54,7 +54,7 @@
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&to>;
                         retro-tap;
-                }
+                };
                 tdPE: tapdance_pe {
                         compatible = "zmk,behavior-tap-dance";
                         label = "TAPDANCE_PE";
