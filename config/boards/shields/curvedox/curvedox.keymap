@@ -33,12 +33,12 @@
                         bindings = <&kp ESC>;
                 };
                 combo_pp {
-                        timeout-ms = <20>;
+                        timeout-ms = <30>;
                         key-positions = <4 5>;
                         bindings = <&kp C_PP>;
                 };
                 combo_bt  {
-                        timeout-ms = <20>;
+                        timeout-ms = <40>;
                         key-positions = <5 17>;
                         bindings = <&to BT>;
                 };
@@ -110,74 +110,95 @@
                 compatible = "zmk,keymap";
 
                 alfa_layer {
-// -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  E  |  R  |  T   |             |  Y  |  U   |  I  |  O  |  P  |
-// |  A  |  S  |  D  |  F  |  G   |             |  H  |  J   |  K  |  L  |  Ö  |
-// |  Z  |  X  |  C  |  V  |  B   |             |  N  |  M   |  Å  |  Ä  | ->| |
-//             | NUM/BACK | SHFT | GUI |   | ALT | SPACE | SYM/ENTER |
                         bindings = <
-   &kp Q &kp W &kp E &kp R &kp T                &kp Y  &kp U  &kp I     &kp O   &kp P
-   &kp A &kp S &kp D &kp F &kp G                &kp H  &kp J  &kp K     &kp L   &kp SEMI
-   &kp Z &kp X &kp C &kp V &kp B                &kp N  &kp M  &kp LBKT  &kp SQT &kp TAB
-          &kp LGUI &sr LSHFT AL &lt 2 BSPC      &tdDOT &mt RCTRL SPACE &lt 1 RET 
+// ╭──────────┬──────────┬──────────┬──────────┬──────────╮                        ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+// |    Q     |    W     |    E     |    R     |    T     |                        |    Y     |    U     |    I     |    O     |    P     |
+      &kp Q      &kp W      &kp E      &kp R      &kp T                               &kp Y      &kp U      &kp I      &kp O      &kp P
+// ├──────────┼──────────┼──────────┼──────────┼──────────┤                        ├──────────┼──────────┼──────────┼──────────┼──────────┤
+// |    A     |    S     |    D     |    F     |    G     |                        |    H     |    J     |    K     |    L     |    Ö     |
+      &kp A      &kp S      &kp D      &kp F      &kp G                               &kp H      &kp J      &kp K      &kp L     &kp SEMI
+// ├──────────┼──────────┼──────────┼──────────┼──────────┤                        ├──────────┼──────────┼──────────┼──────────┼──────────┤
+// |    Z     |    X     |    C     |    V     |    B     |                        |    N     |    M     |    Å     |    Ä     |   ->|    |
+      &kp Z      &kp X      &kp C      &kp V      &kp B                               &kp N      &kp M      &kp LBKT   &kp SQT    &kp TAB
+// ╰──────────┴──────────┼──────────┼──────────┼──────────┼──────────╮  ╭──────────┼──────────┼──────────┼──────────┼──────────┴──────────╯
+//                                  | NUM/BACK |   SHFT   |    GUI   |  |  ALT/./, |  SPACE   |  SYM/ENT |
+                                      &kp LGUI &sr LSHFT AL &lt 2 BSPC     &tdDOT  &mt RCTRL SPACE &lt 1 RET
+//                                  ╰──────────┴──────────┴──────────╯  ╰──────────┴──────────┴──────────╯ 
                         >;
                 };
 
                 sym_layer {
-// -----------------------------------------------------------------------------------------
-// |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  (  |  )  |  =  |
-// |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  |  |
-// |     |     |     |     |     |   |  _  |  +  |  {  |  }  | ->| |
-//             | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp LS(N1)     &kp LS(N2)    &kp LS(N3)  &kp LS(N4)  &kp LS(N5)              &kp LS(N6)   &kp LS(N7)       &kp LS(N8)      &kp LS(N9)      &kp LS(N0)
-   &kp LS(MINUS)  &kp LA(N2)    &kp LA(N3)  &kp LA(N4)  &kp RBKT                &kp BSLH     &kp LS(RA(N7))   &kp RA(N8)      &kp RA(N9)      &kp RA(N7)
-   &kp ESC        &kp COMMA     &kp EQUAL   &kp MINUS   &kp FSLH                &kp GRAVE    &kp PIPE         &kp LS(RA(N8))  &kp LS(RA(N9))  &kp TAB
-                                &kp LGUI    &sr LSHFT AL   &kp BSPC             &tdDOT       &mt RCTRL SPACE  &kp RET
+
+// ╭──────────┬──────────┬──────────┬──────────┬──────────╮                        ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+// |    !     |    "     |    #     |    €     |    %     |                        |    &     |    /     |    (     |    )     |    =     |
+    &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5)                          &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0)
+// ├──────────┼──────────┼──────────┼──────────┼──────────┤                        ├──────────┼──────────┼──────────┼──────────┼──────────┤
+// |    ?     |    @     |    £     |    $     |    ¨     |                        |    '     |    \     |    [     |    ]     |    |     |
+   &kp LS(MINUS) &kp LA(N2) &kp LA(N3) &kp LA(N4) &kp RBKT                           &kp BSLH &kp LS(RA(N7)) &kp RA(N8) &kp RA(N9) &kp RA(N7)
+// ├──────────┼──────────┼──────────┼──────────┼──────────┤                        ├──────────┼──────────┼──────────┼──────────┼──────────┤
+// |   ESC    |    ,     |    ´     |    +     |    -     |                        |    <     |    *     |    {     |    }     |   ->|    |
+   &kp ESC     &kp COMMA   &kp EQUAL &kp MINUS   &kp FSLH                           &kp GRAVE   &kp PIPE &kp LS(RA(N8)) &kp LS(RA(N9)) &kp TAB
+// ╰──────────┴──────────┼──────────┼──────────┼──────────┼──────────╮  ╭──────────┼──────────┼──────────┼──────────┼──────────┴──────────╯
+//                                  |   GUI    |          |    SPC   |  |   ENT    |          |   ALT    |
+                                      &kp LGUI &sr LSHFT AL &kp BSPC      &tdDOT  &mt RCTRL SPACE &kp RET
+//                                  ╰──────────┴──────────┴──────────╯  ╰──────────┴──────────┴──────────╯ 
                         >;
                 };       
 
 // This layer is unreachable until "tri layer state" is sorted out.
 // Leaving it here for completeness.
                 num_layer {
-// -----------------------------------------------------------------------------------------
-// |  1  |  2   |  3   |  4  |  5   |>   <|  6  |  7  |  8  |  9  |  0  |
-// |     | <--  | UP   | --> | PG_U |>   <|  -  |  4  |  5  |  6  |  * / % |
-// |     | HOME | DOWN | END | PG_D |>   <|  +  |  1  |  2  |  3  | ->| |
-//              |      |     |      |>   <|  . , ; |  0  |  RET  |
                         bindings = <
-   &kp N1     &kp N2    &kp N3    &kp N4        &kp N5                 &kp N6           &kp N7  &kp N8 &kp N9 &kp N0
-   &kp LSHFT  &kp LEFT  &kp UP    &kp RIGHT     &kp PAGE_UP            &kp KP_MINUS     &kp N4  &kp N5 &kp N6 &tdMDP
-   &kp ESC    &kp HOME  &kp DOWN  &kp END       &kp PAGE_DOWN          &tdPE            &kp N1  &kp N2 &kp N3 &kp TAB
-                        &trans    &sr LSHFT AL  &trans                 &tdDOT           &kp N0  &kp RET
+// ╭──────────┬──────────┬──────────┬──────────┬──────────╮                        ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+// |    1     |    2     |    3     |    4     |    5     |                        |    6     |    7     |    8     |    9     |    0     |                     
+      &kp N1     &kp N2     &kp N3     &kp N4    &kp N5                               &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
+// ├──────────┼──────────┼──────────┼──────────┼──────────┤                        ├──────────┼──────────┼──────────┼──────────┼──────────┤
+// |  LSHIFT  |   <--    |    UP    |   -->    |   PG_U   |                        |     -    |    4     |    5     |    6     |  * / %   |
+    &kp LSHFT   &kp LEFT   &kp UP    &kp RIGHT  &kp PAGE_UP                        &kp KP_MINUS  &kp N4     &kp N5     &kp N6     &tdMDP
+// ├──────────┼──────────┼──────────┼──────────┼──────────┤                        ├──────────┼──────────┼──────────┼──────────┼──────────┤
+// |          |   HOME   |   DOWN   |   END    |   PG_D   |                        |     +    |    1     |    2     |    3     |   ->|    |
+     &kp ESC    &kp HOME   &kp DOWN   &kp END  &kp PAGE_DOWN                          &tdPE      &kp N1     &kp N2     &kp N3    &kp TAB
+// ╰──────────┴──────────┼──────────┼──────────┼──────────┼──────────╮  ╭──────────┼──────────┼──────────┼──────────┼──────────┴──────────╯
+//                                  |          |          |          |  |  . , ;   |     0    |   RET    | 
+                                       &trans  &sr LSHFT AL  &trans        &tdDOT     &kp N0    &kp RET
+//                                  ╰──────────┴──────────┴──────────╯  ╰──────────┴──────────┴──────────╯
                         >;
                 };
 
                 nav_layer {
-// -----------------------------------------------------------------------------------------
-// |BTCLR|     | ESC |  ~   |     |   | TAB | HOME |  UP  | END | DEL  |
-// | BT1 | GUI | ALT | CTRL | NUM |   |  /  | LEFT | DOWN | RGT | BKSP |
-// | BT2 |     |     |      |     |   |  \  | ENT  |      |     |      |
-//             |     |      |     |   |     |      |      |
                         bindings = <
-   &trans  &trans      &kp ESC  &kp TILDE &trans     &kp TAB  &kp HOME &kp UP   &kp END   &kp DEL
-   &trans  &kp K_CMENU &kp RALT &kp LCTRL &mo 3      &kp FSLH &kp LEFT &kp DOWN &kp RIGHT &kp BSPC
-   &trans  &trans      &trans   &trans    &trans     &kp BSLH &kp RET  &trans   &trans    &trans
-                            &trans   &to AL    &trans     &trans   &trans   &trans
+// ╭──────────┬──────────┬──────────┬──────────┬──────────╮                        ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+// |  BTCLR   |          |   ESC    |    ~     |          |                        |   TAB    |   HOME   |    UP    |   END    |   DEL    |
+      &trans     &trans     &kp ESC   &kp TILDE   &trans                             &kp TAB    &kp HOME    &kp UP    &kp END    &kp DEL
+// ├──────────┼──────────┼──────────┼──────────┼──────────┤                        ├──────────┼──────────┼──────────┼──────────┼──────────┤
+// |   BT1    |   GUI    |   ALT    |   CTRL   |   NUM    |                        |    /     |   LEFT   |   DOWN   |   RGT    |   BKSP   |
+      &trans  &kp K_CMENU &kp RALT    &kp LCTRL   &mo 3                              &kp FSLH   &kp LEFT   &kp DOWN   &kp RIGHT  &kp BSPC
+// ├──────────┼──────────┼──────────┼──────────┼──────────┤                        ├──────────┼──────────┼──────────┼──────────┼──────────┤
+// |   BT2    |          |          |          |          |                        |    \     |   ENT    |          |          |          |
+     &trans      &trans     &trans     &trans     &trans                             &kp BSLH    &kp RET    &trans     &trans     &trans
+// ╰──────────┴──────────┼──────────┼──────────┼──────────┼──────────╮  ╭──────────┼──────────┼──────────┼──────────┼──────────┴──────────╯
+//                                  |          |          |          |  |          |          |          |                         
+                                       &trans  &sr LSHFT AL  &trans        &trans     &trans     &trans
+//                                  ╰──────────┴──────────┴──────────╯  ╰──────────┴──────────┴──────────╯
                         >;
                 };
 
                 bt_layer {
-// -----------------------------------------------------------------------------------------
-// |BTCLR|     | ESC |  ~   |     |   | TAB | HOME |  UP  | END | DEL  |
-// | BT1 | GUI | ALT | CTRL | NUM |   |  /  | LEFT | DOWN | RGT | BKSP |
-// | BT2 |     |     |      |     |   |  \  | ENT  |      |     |      |
-//             |     |      |     |   |     |      |      |
                         bindings = <
-   &bootloader  &trans       &trans       &trans &bt BT_CLR           &kp TAB  &kp HOME &kp UP   &kp END   &trans
-   &bt BT_SEL 0 &trans       &bt BT_PRV   &bt BT_NXT &mo 3            &kp FSLH &kp LEFT &kp DOWN &kp RIGHT &kp BSPC
-   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &trans    &trans           &kp BSLH &kp RET  &trans   &trans    &trans
-                                 &trans   &to AL    &trans           &trans   &trans   &trans
+// ╭──────────┬──────────┬──────────┬──────────┬──────────╮                        ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+// |  BTCLR   |          |   ESC    |    ~     |          |                        |   TAB    |   HOME   |    UP    |   END    |   DEL    |                 
+   &bootloader   &trans     &trans    &trans    &bt BT_CLR                           &kp TAB    &kp HOME    &kp UP    &kp END     &trans
+// ├──────────┼──────────┼──────────┼──────────┼──────────┤                        ├──────────┼──────────┼──────────┼──────────┼──────────┤
+// |   BT1    |   GUI    |   ALT    |   CTRL   |   NUM    |                        |    /     |   LEFT   |   DOWN   |   RGT    |   BKSP   |
+   &bt BT_SEL 0  &trans   &bt BT_PRV &bt BT_NXT   &mo 3                              &kp FSLH   &kp LEFT   &kp DOWN  &kp RIGHT   &kp BSPC
+// ├──────────┼──────────┼──────────┼──────────┼──────────┤                        ├──────────┼──────────┼──────────┼──────────┼──────────┤
+// |   BT2    |          |          |          |          |                        |    \     |    ENT   |          |          |          |
+   &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &trans  &trans                             &kp BSLH   &kp RET     &trans     &trans     &trans
+// ╰──────────┴──────────┼──────────┼──────────┼──────────┼──────────╮  ╭──────────┼──────────┼──────────┼──────────┼──────────┴──────────╯
+//                                  |          |          |          |  |          |          |          | 
+                                       &trans  &sr LSHFT AL  &trans        &trans     &trans     &trans
+//                                  ╰──────────┴──────────┴──────────╯  ╰──────────┴──────────┴──────────╯
                         >;
                 };
 
