@@ -16,6 +16,9 @@
      release-after-ms = <2000>;
      quick-release;
 };
+&lt {
+        quick_tap_ms = <200>;
+};
 
 /* Layers */
 #define AL 0
@@ -28,7 +31,7 @@
         combos {
                 compatible = "zmk,combos";
                 combo_esc {
-                        timeout-ms = <50>;
+                        timeout-ms = <30>;
                         key-positions = <0 1>;
                         bindings = <&kp ESC>;
                 };
@@ -123,7 +126,7 @@
 // ╰──────────┴──────────┼──────────┼──────────┼──────────┼──────────╮  ╭──────────┼──────────┼──────────┼──────────┼──────────┴──────────╯
 //                                  | NUM/BACK |   SHFT   |    GUI   |  |  ALT/./, |  SPACE   |  SYM/ENT |
                                       &kp LGUI &sr LSHFT AL &lt 2 BSPC     &tdDOT  &mt RCTRL SPACE &lt 1 RET
-//                                  ╰──────────┴──────────┴──────────╯  ╰──────────┴──────────┴──────────╯ 
+//                                  ╰──────────┴──────────┴──────────╯  ╰──────────┴──────────┴──────────╯ /
                         >;
                 };
 
