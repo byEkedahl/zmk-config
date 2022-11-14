@@ -45,6 +45,21 @@
                         key-positions = <4 24>;
                         bindings = <&to BT>;
                 };
+                combo_cmd  {
+                        timeout-ms = <30>;
+                        key-positions = <16 17>;
+                        bindings = <&kp LGUI>;
+                };
+                combo_ent  {
+                        timeout-ms = <30>;
+                        key-positions = <26 27>;
+                        bindings = <&kp RET>;
+                };
+                combo_space  {
+                        timeout-ms = <30>;
+                        key-positions = <16 17 19>;
+                        bindings = <&kp SPACE>;
+                };
         };
 
         behaviors {
@@ -200,7 +215,7 @@
    &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &trans  &trans                             &kp BSLH   &kp RET     &trans     &trans     &trans
 // ╰──────────┴──────────┼──────────┼──────────┼──────────┼──────────╮  ╭──────────┼──────────┼──────────┼──────────┼──────────┴──────────╯
 //                                  |          |          |          |  |          |          |          | 
-                                       &trans  &sr LSHFT AL  &trans        &trans     &trans     &trans
+                                       &trans  &sr LSHFT AL  &trans        &trans     &trans     &to AL
 //                                  ╰──────────┴──────────┴──────────╯  ╰──────────┴──────────┴──────────╯
                         >;
                 };
